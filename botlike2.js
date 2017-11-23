@@ -1,3 +1,10 @@
+'use strict'
+
+/** BOT LIKE **/
+/** CODE BY CCOCOT | CCOCOT.CO **/
+/** ccocot@bc0de.net **/
+/** BC0DE.NET - NAONLAH.NET - WingKocoli **/
+
 const Client = require('instagram-private-api').V1;
 const delay = require('delay');
 const chalk = require('chalk');
