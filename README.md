@@ -2,7 +2,7 @@
 
 Based On not Js
 
-* install
+# install
 
 git clone https://github.com/ccocot/Unfollow-not-Followback.git
 cd Unfollow-not-Followback
