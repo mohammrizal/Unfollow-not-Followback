@@ -1,0 +1,14 @@
+{
+  "name": "instagram",
+  "version": "1.0.0",
+  "description": "Instagram Unfollow Not FollowBack",
+  "main": "index.js",
+  "dependencies": {
+    "delay": "^2.0.0",
+    "faker": "^4.1.0",
+    "instagram-private-api": "^0.6.7",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "author": "CCOCOT",
+}
