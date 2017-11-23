@@ -63,7 +63,7 @@ const getFollowing = async function(session, accountId, cursor){
 		}))
 		if (feed.isMoreAvailable()) {
 			const getCursor = feed.getCursor();
-			await getFollowers(session, accountId, getCursor);
+			await getFollowing(session, accountId, getCursor);
 		}
 	} catch (err) {
 		return Promise.reject(err);
