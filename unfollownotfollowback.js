@@ -97,8 +97,8 @@ const Excute = async function(User){
 		console.log("Account To Unfollow: %s", AccountToUnfollow.length);
 		console.log("Unfollow all instagram users that are not following back\n")
 		await Promise.all(AccountToUnfollow.map(async(id) => {
-			await delay(30000);
 			await Unfollow(data.session,id);
+			await delay(30000);
 		}))
 	} catch(err){
 		console.log(err);
