@@ -107,6 +107,6 @@ const Excute = async function(User){
 
 const AccountFollowers = [];
 const AccountFollowing = [];
-var AccountToUnfollow = [];
+const AccountToUnfollow = [];
 
 Excute(User);
