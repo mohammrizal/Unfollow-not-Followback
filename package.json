@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Instagram Unfollow Not FollowBack",
   "main": "index.js",
+  "scripts": {
+    "start": "node unfollownotfollowback.js"
+  },
   "dependencies": {
     "delay": "^2.0.0",
     "faker": "^4.1.0",
