@@ -7,10 +7,11 @@
 
 const Client = require('instagram-private-api').V1;
 const delay = require('delay');
+const _ = require('lodash');
 
 const User = {
-    username: '', // Your Username Instagram
-    password: '', // Your Password Instagram
+    username: 'hanafimaulanayusup', // Your Username Instagram
+    password: 'hanafi123', // Your Password Instagram
 }
 
 const doLogin = async function(User){
@@ -96,10 +97,14 @@ const Excute = async function(User){
 		console.log("Account Following : %s", AccountFollowing.length);
 		console.log("Account To Unfollow: %s", AccountToUnfollow.length);
 		console.log("Unfollow all instagram users that are not following back\n")
-		await Promise.all(AccountToUnfollow.map(async(id) => {
-			await Unfollow(data.session,id);
-			await delay(30000);
-		}))
+		AccountToUnfollow = _.chunk(AccountToUnfollow, 5);
+		for (let i = 0; i < AccountToUnfollow.length; i++) {
+			await Promise.all(AccountToUnfollow[i].map(async(id) => {
+				await Unfollow(data.session,id);				
+			}))
+			await console.log('[-] Delay For 30s');
+			await delay(30000);	
+		}
 	} catch(err){
 		console.log(err);
 	}
@@ -107,6 +112,6 @@ const Excute = async function(User){
 
 const AccountFollowers = [];
 const AccountFollowing = [];
-const AccountToUnfollow = [];
+var AccountToUnfollow = [];
 
 Excute(User);
